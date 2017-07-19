@@ -15,8 +15,18 @@ app.use(express.static(__dirname + '/public'));
 app.get('/', function(req, res) {
 
     // ejs render automatically looks in the views folder
-    res.render('render');
+    res.send('render');
+});//
+
+app.get('/test', function(req, res) {
+
+    // ejs render automatically looks in the views folder
+    res.send("( ͡° ͜ʖ ͡°)");
 });
+
+app.post('/test', function(request,response){
+	
+}
 
 app.listen(port, function() {
     console.log('Our app is running on http://localhost:' + port);
